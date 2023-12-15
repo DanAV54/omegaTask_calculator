@@ -1,5 +1,5 @@
-# The function prints the menu of the calculator and the calculator's options
 def print_menu():
+    # The function prints the menu of the calculator and the calculator's options
     print("Hello!\nWelcome to Dan Ahuv's Calculator")
     print("The Calculator contains the following options")
     print("\t0- quit the calculator")
@@ -10,6 +10,40 @@ def print_menu():
     print("\t5- power operation between two numbers")
 
 
+def input_int_value(minimum_value, maximum_value, input_message):
+    """ The function tries to get an input of type integer
+        if the input from the user is out of the numbers range
+        (smaller than minimum_value and bigger than maximum_value)
+        OR if the input is not a number (contains letters ext)
+        try to get the input again until the input is valid  """
+
+    input_flag = True
+    result_of_input = 0
+
+    while input_flag:
+        result_of_input = input(input_message)
+        if not result_of_input.lstrip('-+').isdigit():
+            print("Enter only numbers please.")
+            continue
+        result_of_input = int(result_of_input)
+        if result_of_input > maximum_value:
+            print("Enter smaller numbers than {0} please".format(maximum_value + 1))
+            continue
+        if result_of_input < minimum_value:
+            print("Enter bigger numbers than {0} please".format(minimum_value - 1))
+            continue
+        input_flag = False
+    return result_of_input
+
+
 if __name__ == '__main__':
-    print_menu()
+    flag = True
+
+    while flag:
+        print_menu()
+        option = input_int_value(0, 5, "please enter an option from the written options: ")
+
+        if option == 0:
+            print("Thank you for using Dan Ahuv's Calculator!\nGoodbye :)")
+            flag = False
 
