@@ -55,6 +55,16 @@ def subtraction_operation():
         first_operand, second_operand, first_operand - second_operand))
 
 
+def multiplication_operation():
+    # the function inputs two integer numbers and prints the result of multiplying these two integers
+    first_operand = input_int_value(-1000000, 1000000, "please enter the first operand for the multiplication operation: ")
+    second_operand = input_int_value(-1000000, 1000000,
+                                     "please enter the second operand for the multiplication operation: ")
+
+    print("the result of the multiplication operation between {0} and {1} is {2}\n\n".format(
+        first_operand, second_operand, first_operand * second_operand))
+
+
 if __name__ == '__main__':
     flag = True
 
@@ -66,8 +76,11 @@ if __name__ == '__main__':
             print("Thank you for using Dan Ahuv's Calculator!\nGoodbye :)")
             flag = False
 
-        if option == 1:
+        elif option == 1:
             addition_operation()
 
-        if option == 2:
+        elif option == 2:
             subtraction_operation()
+
+        elif option == 3:
+            multiplication_operation()
