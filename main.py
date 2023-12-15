@@ -75,8 +75,22 @@ def divide_operation():
         second_operand = input_int_value(
             -1000000, 1000000, "please enter the second operand for the divide operation.\nremember, it can't be 0: ")
 
-    print("the result of the dividing operation between {0} and {1} is {2}\n\n".format(
+    print("the result of the divide operation between {0} and {1} is {2}\n\n".format(
         first_operand, second_operand, first_operand / second_operand))
+
+
+def power_operation():
+    # the function inputs two integer numbers and prints the result of powering these two integers
+    first_operand = 0
+    second_operand = 0
+
+    while first_operand == 0 and second_operand == 0:
+        first_operand = input_int_value(-10, 10, "please enter the first operand for the power operation: ")
+        second_operand = input_int_value(
+            -10, 10, "please enter the second operand for the power operation.\nremember, both operands cannot be 0: ")
+
+    print("the result of the power operation between {0} and {1} is {2}\n\n".format(
+        first_operand, second_operand, first_operand ** second_operand))
 
 
 if __name__ == '__main__':
@@ -101,3 +115,6 @@ if __name__ == '__main__':
 
         elif option == 4:
             divide_operation()
+
+        else:
+            power_operation()
