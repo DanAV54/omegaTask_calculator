@@ -37,11 +37,22 @@ def input_int_value(minimum_value, maximum_value, input_message):
 
 
 def addition_operation():
+    # the function inputs two integer numbers and prints the result of adding these two integers
     first_operand = input_int_value(-1000000, 1000000, "please enter the first operand for the addition operation: ")
     second_operand = input_int_value(-1000000, 1000000, "please enter the second operand for the addition operation: ")
 
-    print("the result of the addition operation between {0} and {1} is {2}\n\n".format(first_operand, second_operand,
-                                                                                   first_operand + second_operand))
+    print("the result of the addition operation between {0} and {1} is {2}\n\n".format(
+        first_operand, second_operand, first_operand + second_operand))
+
+
+def subtraction_operation():
+    # the function inputs two integer numbers and prints the result of subtracting these two integers
+    first_operand = input_int_value(-1000000, 1000000, "please enter the first operand for the subtraction operation: ")
+    second_operand = input_int_value(-1000000, 1000000,
+                                     "please enter the second operand for the subtraction operation: ")
+
+    print("the result of the subtraction operation between {0} and {1} is {2}\n\n".format(
+        first_operand, second_operand, first_operand - second_operand))
 
 
 if __name__ == '__main__':
@@ -58,3 +69,5 @@ if __name__ == '__main__':
         if option == 1:
             addition_operation()
 
+        if option == 2:
+            subtraction_operation()
