@@ -1,16 +1,15 @@
-# This is a sample Python script.
+# The function prints the menu of the calculator and the calculator's options
+def print_menu():
+    print("Hello!\nWelcome to Dan Ahuv's Calculator")
+    print("The Calculator contains the following options")
+    print("\t0- quit the calculator")
+    print("\t1- addition operation between two numbers")
+    print("\t2- subtraction operation between two numbers")
+    print("\t3- multiplication operation between two numbers")
+    print("\t4- the operation of dividing two numbers")
+    print("\t5- power operation between two numbers")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    print_menu()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
