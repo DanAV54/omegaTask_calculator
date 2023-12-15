@@ -57,12 +57,26 @@ def subtraction_operation():
 
 def multiplication_operation():
     # the function inputs two integer numbers and prints the result of multiplying these two integers
-    first_operand = input_int_value(-1000000, 1000000, "please enter the first operand for the multiplication operation: ")
+    first_operand = input_int_value(
+        -1000000, 1000000, "please enter the first operand for the multiplication operation: ")
     second_operand = input_int_value(-1000000, 1000000,
                                      "please enter the second operand for the multiplication operation: ")
 
     print("the result of the multiplication operation between {0} and {1} is {2}\n\n".format(
         first_operand, second_operand, first_operand * second_operand))
+
+
+def divide_operation():
+    # the function inputs two integer numbers and prints the result of dividing these two integers
+    first_operand = input_int_value(-1000000, 1000000, "please enter the first operand for the divide operation: ")
+
+    second_operand = 0
+    while second_operand == 0:
+        second_operand = input_int_value(
+            -1000000, 1000000, "please enter the second operand for the divide operation.\nremember, it can't be 0: ")
+
+    print("the result of the dividing operation between {0} and {1} is {2}\n\n".format(
+        first_operand, second_operand, first_operand / second_operand))
 
 
 if __name__ == '__main__':
@@ -84,3 +98,6 @@ if __name__ == '__main__':
 
         elif option == 3:
             multiplication_operation()
+
+        elif option == 4:
+            divide_operation()
