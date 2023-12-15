@@ -36,6 +36,14 @@ def input_int_value(minimum_value, maximum_value, input_message):
     return result_of_input
 
 
+def addition_operation():
+    first_operand = input_int_value(-1000000, 1000000, "please enter the first operand for the addition operation: ")
+    second_operand = input_int_value(-1000000, 1000000, "please enter the second operand for the addition operation: ")
+
+    print("the result of the addition operation between {0} and {1} is {2}\n\n".format(first_operand, second_operand,
+                                                                                   first_operand + second_operand))
+
+
 if __name__ == '__main__':
     flag = True
 
@@ -46,4 +54,7 @@ if __name__ == '__main__':
         if option == 0:
             print("Thank you for using Dan Ahuv's Calculator!\nGoodbye :)")
             flag = False
+
+        if option == 1:
+            addition_operation()
 
